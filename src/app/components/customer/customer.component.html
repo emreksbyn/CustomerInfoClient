@@ -1,20 +1,36 @@
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>TcNo</th>
-            <th>Email</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let customer of customers">
-            <td>{{customer.id}}</td>
-            <td>{{customer.name}}</td>
-            <td>{{customer.surname}}</td>
-            <td>{{customer.tcNo}}</td>
-            <td>{{customer.email}}</td>
-        </tr>
-    </tbody>
-</table>
+<div>
+    <div class="row">
+        <div class="col-md-1"> </div>
+    <div class="col-md-10">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>TcNo</th>
+                    <th>Email</th>
+                    <th>Addresses</th>
+                    <th>Telephones</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let customer of customers">
+                    <td>{{customer.id}}</td>
+                    <td>{{customer.name}}</td>
+                    <td>{{customer.surname}}</td>
+                    <td>{{customer.tcNo}}</td>
+                    <td>{{customer.email}}</td>
+                    <td><button class="btn btn-success btn-sm">Addresses</button></td>
+                    <td><button class="btn btn-success btn-sm">Telephones</button></td>
+                    <td><button class="btn btn-secondary btn-sm">Modify</button></td>
+                    <td><button class="btn btn-warning btn-sm">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-1"></div>
+    </div>
+</div>
