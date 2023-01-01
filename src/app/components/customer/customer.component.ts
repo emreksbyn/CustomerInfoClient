@@ -11,7 +11,7 @@ import { CustomerService } from 'src/app/services/customer.service';
 export class CustomerComponent implements OnInit {
 
   customers: Customer[] = [];
-
+  
   constructor(private customerService: CustomerService,
     private activatedRoute: ActivatedRoute) { }
 

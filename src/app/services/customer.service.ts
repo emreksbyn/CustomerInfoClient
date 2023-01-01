@@ -20,7 +20,7 @@ export class CustomerService {
   }
 
   add(customer: Customer): Observable<ResponseModel> {
-    return this.httpClient.post<ResponseModel>(this.apiUrl + "create-with-details", customer)
+    return this.httpClient.post<ResponseModel>(this.apiUrl + "create", customer)
   }
 
   update(customer: Customer): Observable<ResponseModel> {
