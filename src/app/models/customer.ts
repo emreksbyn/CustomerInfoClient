@@ -9,4 +9,5 @@ export interface Customer {
     email: string;
     addresses: Address[];
     telephoneNumbers: TelephoneNumber[];
+    haveUnsualName: boolean;
 }

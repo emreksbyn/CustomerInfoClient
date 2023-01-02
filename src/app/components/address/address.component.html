@@ -1,1 +1,30 @@
-<p>address works!</p>
+<div>
+    <div class="row">
+        <div class="col-md-1"> </div>
+    <div class="col-md-10">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Description</th>
+                    <th>city</th>
+                    <th>district</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let address of addresses">
+                    <td>{{address.id}}</td>
+                    <td>{{address.description}}</td>
+                    <td>{{address.city}}</td>
+                    <td>{{address.district}}</td>
+                    <td><button class="btn btn-secondary btn-sm">Modify</button></td>
+                    <td><button class="btn btn-warning btn-sm">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-1"></div>
+    </div>
+</div>

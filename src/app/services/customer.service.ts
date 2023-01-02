@@ -15,7 +15,7 @@ export class CustomerService {
   constructor(private httpClient: HttpClient) { }
 
   getCustomers(): Observable<ListResponseModel<Customer>> {
-    let newPath = this.apiUrl + "get-customers-details";
+    let newPath = this.apiUrl + "get-all";
     return this.httpClient.get<ListResponseModel<Customer>>(newPath);
   }
 
@@ -24,7 +24,7 @@ export class CustomerService {
   }
 
   update(customer: Customer): Observable<ResponseModel> {
-    return this.httpClient.put<ResponseModel>(this.apiUrl + "update-with-details", customer)
+    return this.httpClient.put<ResponseModel>(this.apiUrl + "update", customer)
   }
 
   delete(id: number): Observable<ResponseModel> {
