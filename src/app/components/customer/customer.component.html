@@ -25,10 +25,13 @@
                         <td>{{customer.tcNo}}</td>
                         <td>{{customer.email}}</td>
                         <td>{{customer.haveUnsualName ? 'Yes' : 'No' }}</td>
-                        <td><button class="btn btn-success btn-sm" routerLink="addresses/list/{{customer.id}}">Addresses</button></td>
-                        <td><button class="btn btn-success btn-sm">Telephones</button></td>
-                        <td><button class="btn btn-secondary btn-sm">Modify</button></td>
-                        <td><button class="btn btn-warning btn-sm">Delete</button></td>
+                        <td><button class="btn btn-primary btn-sm"
+                                routerLink="addresses/list/{{customer.id}}">Addresses</button></td>
+                        <td><button class="btn btn-success btn-sm"
+                                routerLink="telephones/list/{{customer.id}}">Telephones</button></td>
+                        <td><button class="btn btn-warning btn-sm"
+                                routerLink="/customers/getById/{{customer.id}}">Modify</button></td>
+                        <td><button class="btn btn-danger btn-sm" (click)="delete(customer.id)">Delete</button></td>
                     </tr>
                 </tbody>
             </table>

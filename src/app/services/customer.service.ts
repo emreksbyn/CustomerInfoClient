@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Customer } from '../models/customer';
 import { ListResponseModel } from '../models/responseModels/listResponseModel';
 import { ResponseModel } from '../models/responseModels/responseModel';
+import { SingleResponseModel } from '../models/responseModels/singleResponseModel';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,11 @@ export class CustomerService {
   getCustomers(): Observable<ListResponseModel<Customer>> {
     let newPath = this.apiUrl + "get-all";
     return this.httpClient.get<ListResponseModel<Customer>>(newPath);
+  }
+
+  getById(id: number): Observable<SingleResponseModel<Customer>> {
+    let newPath = this.apiUrl + "get-by-id?id=" + id;
+    return this.httpClient.get<SingleResponseModel<Customer>>(newPath);
   }
 
   add(customer: Customer): Observable<ResponseModel> {

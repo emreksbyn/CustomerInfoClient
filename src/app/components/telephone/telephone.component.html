@@ -7,18 +7,16 @@
                 <tr>
                     <th>Id</th>
                     <th>Description</th>
-                    <th>city</th>
-                    <th>district</th>
+                    <th>TelephoneNo</th>
                     <th></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let address of addresses">
-                    <td>{{address.id}}</td>
-                    <td>{{address.description}}</td>
-                    <td>{{address.city}}</td>
-                    <td>{{address.district}}</td>
+                <tr *ngFor="let telephone of telephones">
+                    <td>{{telephone.id}}</td>
+                    <td>{{telephone.description}}</td>
+                    <td>{{telephone.telephoneNo}}</td>
                     <td><button class="btn btn-warning btn-sm">Modify</button></td>
                     <td><button class="btn btn-danger btn-sm">Delete</button></td>
                 </tr>

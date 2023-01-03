@@ -10,6 +10,7 @@ import { CustomerService } from 'src/app/services/customer.service';
 export class CustomerAddComponent implements OnInit {
 
   customerAddForm: FormGroup;
+  
   constructor(private customerService: CustomerService,
     private formBuilder: FormBuilder) { }
 

@@ -9,6 +9,8 @@ import { CustomerComponent } from './components/customer/customer.component';
 import { AddressComponent } from './components/address/address.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CustomerAddComponent } from './components/customer-add/customer-add.component';
+import { TelephoneComponent } from './components/telephone/telephone.component';
+import { CustomerUpdateComponent } from './components/customer-update/customer-update.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CustomerAddComponent } from './components/customer-add/customer-add.com
     CustomerComponent,
     AddressComponent,
     NavbarComponent,
-    CustomerAddComponent
+    CustomerAddComponent,
+    TelephoneComponent,
+    CustomerUpdateComponent
   ],
   imports: [
     BrowserModule,
