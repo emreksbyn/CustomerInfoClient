@@ -1,1 +1,38 @@
-<p>telephone-update works!</p>
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">Update Customer</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="telephoneUpdateForm">
+                    <div class="form-group" *ngIf="telephone">
+                        <div class="mb-3">
+                            <label for="id">Id</label>
+                            <input type="number" id="id" formControlName="id" class="form-control"
+                                placeholder="{{telephone.id}}" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" formControlName="description" class="form-control"
+                                placeholder="{{telephone.description}}" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="telephoneNo">Telephone No</label>
+                            <input type="text" id="telephoneNo" formControlName="telephoneNo" class="form-control"
+                                placeholder="{{telephone.telephoneNo}}" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerId">Customer Id</label>
+                            <input type="number" id="customerId" formControlName="customerId" class="form-control"
+                                placeholder="{{telephone.customerId}}" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="update()">Update Telephone</button>
+            </div>
+        </div>
+    </div>
+</div>

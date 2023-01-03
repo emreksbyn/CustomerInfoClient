@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Address } from '../models/address';
 import { ListResponseModel } from '../models/responseModels/listResponseModel';
 import { ResponseModel } from '../models/responseModels/responseModel';
+import { SingleResponseModel } from '../models/responseModels/singleResponseModel';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,11 @@ export class AddressService {
   apiUrl: string = "http://localhost:5041/api/Addresses/";
 
   constructor(private httpClient: HttpClient) { }
+
+  getById(id: number): Observable<SingleResponseModel<Address>> {
+    let newPath = this.apiUrl + "get-by-id?id=" + id;
+    return this.httpClient.get<SingleResponseModel<Address>>(newPath);
+  }
 
   getByCustomerId(customerId: number): Observable<ListResponseModel<Address>> {
     let newPath = this.apiUrl + "get-by-customerId?customerId=" + customerId;

@@ -1,1 +1,43 @@
-<p>address-update works!</p>
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">Update Customer</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="addressUpdateForm">
+                    <div class="form-group" *ngIf="address">
+                        <div class="mb-3">
+                            <label for="id">Id</label>
+                            <input type="number" id="id" formControlName="id" class="form-control"
+                                placeholder="{{address.id}}" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" formControlName="description" class="form-control"
+                                placeholder="{{address.description}}" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="city">City</label>
+                            <input type="text" id="city" formControlName="city" class="form-control"
+                                placeholder="{{address.city}}" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="district">District</label>
+                            <input type="text" id="district" formControlName="district" class="form-control"
+                                placeholder="{{address.district}}" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="customerId">Customer Id</label>
+                            <input type="number" id="customerId" formControlName="customerId" class="form-control"
+                                placeholder="{{address.customerId}}" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="update()">Update Address</button>
+            </div>
+        </div>
+    </div>
+</div>

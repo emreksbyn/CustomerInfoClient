@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/responseModels/listResponseModel';
 import { ResponseModel } from '../models/responseModels/responseModel';
+import { SingleResponseModel } from '../models/responseModels/singleResponseModel';
 import { TelephoneNumber } from '../models/telephoneNumber';
 
 @Injectable({
@@ -13,6 +14,11 @@ export class TelephoneNumberService {
   apiUrl: string = "http://localhost:5041/api/TelephoneNumbers/";
 
   constructor(private httpClient: HttpClient) { }
+
+  getById(id: number): Observable<SingleResponseModel<TelephoneNumber>> {
+    let newPath = this.apiUrl + "get-by-id?id=" + id;
+    return this.httpClient.get<SingleResponseModel<TelephoneNumber>>(newPath);
+  }
 
   getByCustomerId(customerId: number): Observable<ListResponseModel<TelephoneNumber>> {
     let newPath = this.apiUrl + "get-by-customerId?customerId=" + customerId;
