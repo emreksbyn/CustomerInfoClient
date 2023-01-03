@@ -1,1 +1,38 @@
-<p>address-add works!</p>
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">Add Address</h5>
+            </div>
+            <div class="card-body">
+                    <form [formGroup]="addressAddForm">
+                    <div class="form-group">
+                        <div class="mb-3">
+                            <label for="customerId">CustomerId</label>
+                            <input type="number" id="customerId" formControlName="customerId" class="form-control"
+                                placeholder="CustomerId" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" formControlName="description" class="form-control"
+                                placeholder="Description" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="city">City</label>
+                            <input type="text" id="city" formControlName="city" class="form-control"
+                                placeholder="City" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="district">District</label>
+                            <input type="text" id="district" formControlName="district" class="form-control"
+                                placeholder="District" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="add()">Create Address</button>
+            </div>
+        </div>
+    </div>
+</div>

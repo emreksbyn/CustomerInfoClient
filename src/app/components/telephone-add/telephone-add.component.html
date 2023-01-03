@@ -1,1 +1,33 @@
-<p>telephone-add works!</p>
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">Add Telephone</h5>
+            </div>
+            <div class="card-body">
+                    <form [formGroup]="telephoneAddForm">
+                    <div class="form-group">
+                        <div class="mb-3">
+                            <label for="customerId">CustomerId</label>
+                            <input type="number" id="customerId" formControlName="customerId" class="form-control"
+                                placeholder="CustomerId" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" formControlName="description" class="form-control"
+                                placeholder="Description" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="telephoneNo">TelephoneNo</label>
+                            <input type="text" id="telephoneNo" formControlName="telephoneNo" class="form-control"
+                                placeholder="TelephoneNo" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="add()">Create Telephone</button>
+            </div>
+        </div>
+    </div>
+</div>
