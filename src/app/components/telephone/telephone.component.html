@@ -18,7 +18,7 @@
                     <td>{{telephone.description}}</td>
                     <td>{{telephone.telephoneNo}}</td>
                     <td><button class="btn btn-warning btn-sm" routerLink="telephones/getById/{{telephone.id}}">Modify</button></td>
-                    <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                    <td><button class="btn btn-danger btn-sm" (click)="delete(telephone.id)">Delete</button></td>
                 </tr>
             </tbody>
         </table>

@@ -20,7 +20,7 @@
                     <td>{{address.city}}</td>
                     <td>{{address.district}}</td>
                     <td><button class="btn btn-warning btn-sm" routerLink="addresses/getById/{{address.id}}">Modify</button></td>
-                    <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                    <td><button class="btn btn-danger btn-sm" (click)="delete(address.id)">Delete</button></td>
                 </tr>
             </tbody>
         </table>

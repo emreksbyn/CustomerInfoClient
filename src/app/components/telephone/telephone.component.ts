@@ -26,4 +26,14 @@ export class TelephoneComponent implements OnInit {
       this.telephones = response.data;
     })
   }
+
+  delete(id: number) {
+    if (confirm("Are you sure?"))
+      this.telephoneService.delete(id).subscribe(response => {
+        console.log(response);
+        this.activatedRoute.params.subscribe(param => {
+          this.getTelephonesByCustomer(param["customerId"]);
+        });
+      })
+  }
 }

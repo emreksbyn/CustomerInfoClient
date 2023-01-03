@@ -16,7 +16,7 @@ export class AddressComponent implements OnInit {
     private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(param =>{
+    this.activatedRoute.params.subscribe(param => {
       this.getAddressesByCustomer(param['customerId'])
     })
   }
@@ -25,5 +25,15 @@ export class AddressComponent implements OnInit {
     this.addressService.getByCustomerId(id).subscribe(response => {
       this.addresses = response.data;
     })
+  }
+
+  delete(id: number) {
+    if (confirm("Are you sure?"))
+      this.addressService.delete(id).subscribe(response => {
+        console.log(response);
+        this.activatedRoute.params.subscribe(param => {
+          this.getAddressesByCustomer(param["customerId"]);
+        });
+      })
   }
 }
